@@ -10,13 +10,7 @@ namespace Lab_3
     {
         static void Main(string[] args)
         {
-            Persona personita = new Persona();
-            personita.SetRut();
-            Console.WriteLine(personita.GetRut());
-            personita.SetFullName();
-            Console.WriteLine(personita.GetFullName());
-
-
+            Console.WriteLine("BIENVENIDOS AL SUPERMERCADO NAT´S");
         }
     }
 }

@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab_3
 {
-    public class Cliente : Persona
+    class Class1
     {
-
     }
 }
