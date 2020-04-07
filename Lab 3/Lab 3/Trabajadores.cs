@@ -6,15 +6,34 @@ using System.Threading.Tasks;
 
 namespace Lab_3
 {
-    public class Trabajadores : Persona 
+    public class Trabajadores : Persona
     {
-        public List<Object> workers = new List<Object>();
-        //QUIZAS NECESITESMOS UN BOB CONSTRUCTOR//
-
-
-        public void AddWorkers()
+        
+        protected string Salary;
+        protected string Schedule;
+        public void SetSchedule(string Schedule )
         {
-            //NADA XD//
+            this.Schedule = Schedule;
+
         }
+        public string GetSchedule()
+        {
+            return Schedule;
+        }
+        public void SetSalary(string Salary)
+        {
+            this.Salary = Salary;
+        }
+        public string GetSalary()
+        {
+            return Salary;
+        }
+
+        
+        
+
+
     }
+
 }
+

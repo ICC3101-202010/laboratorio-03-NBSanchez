@@ -8,81 +8,46 @@ namespace Lab_3
 {
     public class Persona
     {
-        private string Rut;
-        private string Name;
-        private string LastName;
-        private int BDay;
-        private string Nationality;
+        protected string Rut;
+        protected string Name;
+        protected string LastName;
+        protected string BDay;
+        protected string Nationality;
 
-        protected List<String> listname = new List<String>() { "Olivia", "Paula", "Alexis", "Agustin", "Alberto", "Arturo" };
-        protected List<String> listlastname = new List<String>() { "Gotelli", "Yañez", "Vidal", "Ronaldo", "Medel", "Bravo" };
-        protected List<String> listnationality = new List<String>() { "Colombiana", "Americana", "Austriaca", "Checo", "Chino", "Arabe" };
+        protected List<String> listname = new List<String>() { "Olivia", "Paula", "Alexis", "Agustin", "Alberto", "Arturo","Lorena","Miguel","Constanza","Felipe" };
+        protected List<String> listlastname = new List<String>() { "Gotelli", "Yañez", "Vidal", "Ronaldo", "Medel", "Bravo","Brooks","Kardashian","Swift","Stallone"};
+        protected List<String> listnationality = new List<String>() { "Colombiana", "Americana", "Austriaca", "Checo", "Chino", "Arabe","Panameño","Chileno","Italiana","Cubano"};
 
 
-        public void SetFullName()
+        public void SetFullName(int A1, int A2, int A3, int Day, int Month , int Year)
         {
-            Random random = new Random();
-            int AleName = random.Next(0, listname.Count());
-            int AleLast = random.Next(0, listlastname.Count());
-            int AleNati = random.Next(0, listnationality.Count());
-
-            this.Name = listname[AleName];
-            this.LastName = listlastname[AleLast];
-            this.Nationality = listnationality[AleNati];
-
+            this.Name = listname[A1];
+            this.LastName = listlastname[A2];
+            this.Nationality = listnationality[A3];
+            this.BDay = Day.ToString() + "/" + Month.ToString() + "/" + Year.ToString();
         }
         public string GetFullName()
         {
-            return (Name + " " + LastName + " " + Nationality);
+            return (Name + " " + LastName + " " + Nationality + " " + BDay + " " + Rut);
         }
 
-        public void SetRut()
+        public void SetRut(int D1, int D2, int D3, int D4, int D5, int D6, int D7, int D8, int D9)
         {
-            Random random = new Random();
-            int D1 = random.Next(0, 3);
-
-            if (D1 == 0)
-            {
-                int D2 = random.Next(3, 10);
-                this.Rut += D2.ToString();
-            }
-            else if (D1 == 1)
-            {
-                this.Rut += D1.ToString();
-                int D2 = random.Next(0, 10);
-                this.Rut += D2.ToString();
-
-            }
-            else if (D1 == 2)
-            {
-                this.Rut += D1.ToString();
-                int D2 = random.Next(0, 6);
-                this.Rut += D2.ToString();
-            }
-            for ( int x = 0; x < 2; x++)
-            {
-                this.Rut += ".";
-                int D3 = random.Next(0, 10);
-                this.Rut += D3.ToString();
-                int D4 = random.Next(0, 10);
-                this.Rut += D4.ToString();
-                int D5 = random.Next(0, 10);
-                this.Rut += D5.ToString();
-            }
-            this.Rut += "-";
-            int guion = random.Next(0, 11);
-            if (guion == 10)
-            {
-                this.Rut += "K";
-            }
-            else
-            {
-                this.Rut += guion.ToString();
-            }       
+            Rut += D1.ToString() + D2.ToString() + "." + D3.ToString() + D4.ToString() + D5.ToString() + "." + D6.ToString() + D7.ToString() + D8.ToString() + "-" + D9.ToString();
         }
         public string GetRut()
         {
             return Rut;
+        }
+        public void SetName(string Name, string LastName, string Nationality, string Rut, string Day, string Month, string Year)
+        {
+            this.Name = Name;
+            this.LastName = LastName;
+            this.Nationality = Nationality;
+            this.Rut = Rut;
+            this.BDay += Day + "/" + Month + "/" + Year;
+
+
         }
 
 

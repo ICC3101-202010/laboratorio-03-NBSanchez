@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab_3
 {
-    class Jefes : Trabajadores
+    class Jefes : Trabajadores //LISTO//
     {
         private string SalaryJef = "SalaryJef";
         private string ScheduleJef = "ScheduleJef";

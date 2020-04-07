@@ -44,10 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Auxiliares.cs" />
+    <Compile Include="Cliente.cs" />
     <Compile Include="Supermercado.cs" />
     <Compile Include="Supervisores.cs" />
     <Compile Include="Jefes.cs" />
-    <Compile Include="Cliente.cs" />
     <Compile Include="Trabajadores.cs" />
     <Compile Include="Producto.cs" />
     <Compile Include="Persona.cs" />

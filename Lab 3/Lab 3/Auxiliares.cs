@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab_3
 {
-    public class Auxiliares : Trabajadores
+    public class Auxiliares : Trabajadores  //LISTA//
     {
         private string SalaryAux = "SalaryAux";
         private string ScheduleAux = "ScheduleAux";
